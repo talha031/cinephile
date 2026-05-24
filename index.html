@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+
+</head>
+
+<body class="bg-[#131313] font-inter">
+  <div class="flex flex-col min-h-screen">
+
+    <!-- TOP BAR -->
+    <header class="flex justify-between items-center px-8 h-[60px] border-b border-zinc-800 bg-[#131313 ]">
+      <div class="text-[#e9c176] tracking-[0.25em] text-xs font-epilogue font-bold uppercase">
+        The Obsidian Quiz
+      </div>
+
+      <div class="flex items-center gap-6">
+
+        <div id="timer"
+          class="flex items-center gap-2 px-4 py-1 border border-[#e9c176] bg-zinc-900 text-[#e9c176] text-sm font-bold">
+
+        </div>
+
+        <button class="text-zinc-400 text-xs tracking-widest uppercase">
+          Exit
+        </button>
+
+      </div>
+    </header>
+    <div class="flex flex-col lg:flex-row flex-1">
+
+      <!-- SIDEBAR -->
+      <aside class="w-full lg:w-[240px] bg-[#1b1b1b] border-r border-zinc-800 flex flex-col">
+
+        <div class="p-6 border-b border-zinc-800 flex items-center gap-3">
+          <div>
+            <div class="text-[#e9c176] font-epilogue text-lg">Connoisseur</div>
+            <div class="text-xs text-zinc-500 uppercase tracking-widest">Level 12 Scholar</div>
+          </div>
+        </div>
+
+        <nav class="flex flex-col mt-2 text-xs uppercase tracking-widest">
+
+          <div class="px-5 py-3 bg-[#e9c176]  text-black">
+            Current Quiz
+          </div>
+
+          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Leaderboard</div>
+          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Past Attempts</div>
+          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Settings</div>
+
+        </nav>
+
+        <button class="m-5 mt-auto border border-[#e9c176] text-[#e9c176] text-xs uppercase tracking-widest py-3">
+          Premium Access
+        </button>
+
+      </aside>
+      <!-- MAIN -->
+      <main class="flex-1 p-4 md:p-6 lg:p-10">
+
+        <!-- PROGRESS -->
+        <div id="progress" class="flex justify-between mb-2 text-white text-5xl font-bold font-epilogue">
+        </div>
+
+        <div id="div" class="h-[2px] bg-zinc-800 mb-10">
+          <div class="h-full w-[30%] bg-[#e9c176]"></div>
+        </div>
+
+        <!-- QUESTION -->
+        <h1 id="question" class="text-2xl sm:text-3xl md:text-5xl text-white font-epilogue font-bold mb-4">
+
+        </h1>
+
+
+        <!-- OPTIONS -->
+        <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-4 font-inter">
+        </div>
+        <!-- NEXT BUTTON -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:justify-between mt-10">
+
+          <button id="prev" class="text-xs uppercase tracking-[0.25em] text-zinc-500">
+            Previous
+          </button>
+
+          <button id="next" class="px-10 py-4 bg-[#e9c176]  text-black text-xs font-bold tracking-[0.25em] uppercase">
+            Submit Answer
+          </button>
+
+        </div>
+
+        <!-- SCORE -->
+        <div id="scorebox"
+          class="h-[600px] -mt-10 w-full bg-cover bg-no-repeat flex flex-col items-center justify-center">
+
+        </div>
+        <div id="review" class="mt-8 space-y-6"></div>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
