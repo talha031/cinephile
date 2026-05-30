@@ -1,4 +1,4 @@
-import { API_KEY } from "./config.js";
+export const API_KEY = "27c0a731698e4a3a3cdd94ca1a5f7a30";
 export const BASE_URL = "https://api.themoviedb.org/3";
 export const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
