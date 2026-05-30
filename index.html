@@ -13,100 +13,138 @@
 
 </head>
 
-<body class="bg-[#131313] font-inter">
-  <div class="flex flex-col min-h-screen">
+<body class="bg-[#0d0d0d]">
 
-    <!-- TOP BAR -->
-    <header class="flex justify-between items-center px-8 h-[60px] border-b border-zinc-800 bg-[#131313 ]">
-      <div class="text-[#e9c176] tracking-[0.25em] text-xs font-epilogue font-bold uppercase">
-        The Obsidian Quiz
+  <!-- NAVBAR -->
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5">
+    <div class="flex items-center gap-4 sm:gap-10">
+      <h1 class="text-[#cc0000] text-2xl sm:text-3xl font-bold tracking-wider">
+        CINEPHILE
+      </h1>
+      <div class="flex items-center gap-3 sm:gap-6">
+        <a href="index.html" class="text-[#cc0000] text-xs sm:text-sm font-medium">
+          Home
+        </a>
+        <a href="favourites.html" class="text-[#aaaaaa] text-xs sm:text-sm transition hover:text-[#cc0000]">
+          Favourites
+        </a>
       </div>
-
-      <div class="flex items-center gap-6">
-
-        <div id="timer"
-          class="flex items-center gap-2 px-4 py-1 border border-[#e9c176] bg-zinc-900 text-[#e9c176] text-sm font-bold">
-
-        </div>
-
-        <button class="text-zinc-400 text-xs tracking-widest uppercase">
-          Exit
-        </button>
-
-      </div>
-    </header>
-    <div class="flex flex-col lg:flex-row flex-1">
-
-      <!-- SIDEBAR -->
-      <aside class="w-full lg:w-[240px] bg-[#1b1b1b] border-r border-zinc-800 flex flex-col">
-
-        <div class="p-6 border-b border-zinc-800 flex items-center gap-3">
-          <div>
-            <div class="text-[#e9c176] font-epilogue text-lg">Connoisseur</div>
-            <div class="text-xs text-zinc-500 uppercase tracking-widest">Level 12 Scholar</div>
-          </div>
-        </div>
-
-        <nav class="flex flex-col mt-2 text-xs uppercase tracking-widest">
-
-          <div class="px-5 py-3 bg-[#e9c176]  text-black">
-            Current Quiz
-          </div>
-
-          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Leaderboard</div>
-          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Past Attempts</div>
-          <div class="px-5 py-3 text-zinc-400 hover:bg-white/5">Settings</div>
-
-        </nav>
-
-        <button class="m-5 mt-auto border border-[#e9c176] text-[#e9c176] text-xs uppercase tracking-widest py-3">
-          Premium Access
-        </button>
-
-      </aside>
-      <!-- MAIN -->
-      <main class="flex-1 p-4 md:p-6 lg:p-10">
-
-        <!-- PROGRESS -->
-        <div id="progress" class="flex justify-between mb-2 text-white text-5xl font-bold font-epilogue">
-        </div>
-
-        <div id="div" class="h-[2px] bg-zinc-800 mb-10">
-          <div class="h-full w-[30%] bg-[#e9c176]"></div>
-        </div>
-
-        <!-- QUESTION -->
-        <h1 id="question" class="text-2xl sm:text-3xl md:text-5xl text-white font-epilogue font-bold mb-4">
-
-        </h1>
-
-
-        <!-- OPTIONS -->
-        <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-4 font-inter">
-        </div>
-        <!-- NEXT BUTTON -->
-        <div class="flex flex-col sm:flex-row gap-4 sm:justify-between mt-10">
-
-          <button id="prev" class="text-xs uppercase tracking-[0.25em] text-zinc-500">
-            Previous
-          </button>
-
-          <button id="next" class="px-10 py-4 bg-[#e9c176]  text-black text-xs font-bold tracking-[0.25em] uppercase">
-            Submit Answer
-          </button>
-
-        </div>
-
-        <!-- SCORE -->
-        <div id="scorebox"
-          class="h-[600px] -mt-10 w-full bg-cover bg-no-repeat flex flex-col items-center justify-center">
-
-        </div>
-        <div id="review" class="mt-8 space-y-6"></div>
     </div>
+    <div class="flex items-center gap-3 sm:gap-5">
+      <button class="flex items-center justify-center
+      w-9 h-9 sm:w-auto sm:h-auto
+      text-[#aaaaaa]  transition">
+        <i data-lucide="search" class="w-5 h-5"></i>
+      </button>
+      <button class="flex items-center justify-center
+      w-9 h-9 sm:w-auto sm:h-auto
+      text-[#aaaaaa]  transition">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
 
-    
-    <script src="main.js"></script>
+  <!-- LOADER -->
+    <div id="loader"
+class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div
+  class="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin">
+  </div>
+</div>
+
+  <!-- HERO  -->
+  <section id="hero" class="relative h-[500px] mx-8 mt-6 rounded-[8px] overflow-hidden">
+   
+  </section>
+
+  <!-- SEARCH -->
+  <section class="max-w-7xl mx-auto px-6 mt-8">
+    <div class="bg-[#111111] border border-[#222222] rounded-lg p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <p class="text-[#aaaaaa] text-sm">
+            Discover your next favourite movie,
+          </p>
+          <p class="text-[#aaaaaa] text-sm">
+            show or documentary.
+          </p>
+        </div>
+        <div class="relative flex w-full md:w-[400px]">
+          <input id="searchInput" type="text" placeholder="Discover your favourite movies"
+            class="w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-md py-3 pl-4 pr-12 text-[#ffffff] placeholder:text-[#aaaaaa] focus:outline-none focus:border-red-600" />
+          <i data-lucide="search" class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section class="max-w-7xl mx-auto px-6 mt-12">
+    <h2 class="text-[#ffffff] text-2xl font-semibold mb-6">
+      Trending Now
+    </h2>
+    <div id="trendingMovies" class="flex gap-4 overflow-x-auto pb-4">
+    </div>
+    <div class="flex justify-center mt-8">
+      <button class="border border-red-600 text-[#cc0000] px-6 py-2 rounded hover:bg-red-600 hover:text-white transition">
+        View More Movies
+      </button>
+    </div>
+  </section>
+<!-- COLLECTION -->
+
+  <section class="max-w-7xl mx-auto h-auto py-5 px-6 mt-16 bg-[#1a1a1a]">
+    <h2 class="text-white py-5 text-2xl font-semibold mb-6">
+      Curated Collections
+    </h2>
+    <div class="grid md:grid-cols-2  mt-8 gap-6">
+      <!-- Card 1 -->
+      <div id="collection1"  class="relative bg-[#1e1e1e]  -mt-5 h-64 rounded-xl overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        
+      </div>
+
+      <!-- Card 2 -->
+      <div id="collection2" class="relative bg-[#1e1e1e]  -mt-5 h-64 rounded-xl overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-6 py-8 mt-20 border-t border-gray-800">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <h1 class="text-[#cc0000] text-3xl font-bold tracking-wider">
+          CINEPHILE
+        </h1>
+        <p class="text-gray-500 text-sm mt-2">
+          © 2026 Cinephile. All rights reserved.
+        </p>
+      </div>
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="text-[#aaaaaa] hover:text-[#cc0000] transition text-sm font-medium">
+          Home
+        </a>
+        <a href="favourites.html" class="text-[#aaaaaa] hover:text-[#cc0000] transition text-sm font-medium">
+          Favourites
+        </a>
+      </div>
+      <div class="flex items-center gap-5">
+        <button class="text-[#aaaaaa] transition">
+          <i data-lucide="earth"></i>
+        </button>
+        <button class="text-[#aaaaaa]  transition">
+          <i data-lucide="at-sign"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="javascript/home.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>
