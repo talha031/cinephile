@@ -991,6 +991,14 @@ video {
   height: 100vh;
 }
 
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+
+.min-h-\[600px\] {
+  min-height: 600px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -2615,6 +2623,10 @@ video {
   line-height: 1;
 }
 
+.text-\[1px\] {
+  font-size: 1px;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2633,6 +2645,22 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[100px\] {
+  font-size: 100px;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
+}
+
+.text-\[9px\] {
+  font-size: 9px;
 }
 
 .font-black {
@@ -2780,11 +2808,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-500 {
@@ -3382,8 +3405,20 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:h-\[440px\] {
     height: 440px;
+  }
+
+  .md\:min-h-\[600px\] {
+    min-height: 600px;
   }
 
   .md\:w-\[300px\] {
@@ -3431,9 +3466,24 @@ video {
     text-align: left;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

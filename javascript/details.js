@@ -38,7 +38,7 @@ function renderHero(movie) {
       >
 
       <div class="mb-6 max-w-2xl">
-        <h1 class="text-3xl font-black uppercase leading-none tracking-tight">
+        <h1 class="text-lg md:text-3xl mt-3 font-black uppercase leading-none tracking-tight">
           ${movie.title}
         </h1>
 
@@ -81,12 +81,12 @@ function renderHero(movie) {
 </button>
         </div>
 
-        <div class="mt-10">
-          <h2 class="text-2xl font-bold mb-4">
+        <div class="mt-5 md:mt-10">
+          <h2 class="text-xl md:text-2xl font-bold mb-2 md:mb-4">
             The Storyline
           </h2>
           <p
-            class="text-[#aaaaaa] leading-relaxed text-lg">
+            class="text-[#aaaaaa] leading-relaxed text-[9px] md:text-lg">
             ${movie.overview}
           </p>
         </div>
