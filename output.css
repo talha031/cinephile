@@ -699,10 +699,6 @@ video {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -759,10 +755,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.-mt-20 {
-  margin-top: -5rem;
 }
 
 .mb-2 {
@@ -983,8 +975,8 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-12 {
