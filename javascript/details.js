@@ -30,8 +30,8 @@ function renderHero(movie) {
     ">
   </div>
   <div class="absolute inset-0 bg-red-900/10"></div>
-  <div class="relative z-10 flex items-center h-full px-4 md:px-16 pt-20 md:pt-24">
-    <div class="flex flex-col md:flex-row items-center md:items-end gap-8 md:gap-14">
+  <div class="relative z-10 flex items-start min-h-screen px-4 md:px-16 pt-24 pb-10 ">
+    <div class="flex flex-col mt-2 lg:mt-10 md:flex-row items-center md:items-end gap-8 md:gap-14">
       <img
         src="${IMAGE_BASE_URL}${movie.poster_path}"
         class=" w-[200px] md:w-[300px] h-[300px] md:h-[440px] object-cover rounded-[8px] border border-red-900/30"
@@ -86,7 +86,7 @@ function renderHero(movie) {
             The Storyline
           </h2>
           <p
-            class="text-[#aaaaaa] leading-relaxed text-[9px] md:text-lg">
+            class="text-[#aaaaaa] leading-relaxed text-sm md:text-lg break-words max-h-[40vh] overflow-hidden">
             ${movie.overview}
           </p>
         </div>
@@ -96,11 +96,7 @@ function renderHero(movie) {
   `;
   lucide.createIcons();
 }
-// function renderOverview(movie) {
-//   document.getElementById("movieOverview").textContent =
-//     movie.overview;
-// }
-// console.log(cast);
+
 function renderCast(cast) {
 
   const container =
@@ -109,9 +105,7 @@ function renderCast(cast) {
   container.innerHTML = cast
     .slice(0, 5)
     .map(actor => `
-
         <div class="text-center">
-
             <img
             src="${actor.profile_path
         ? IMAGE_BASE_URL + actor.profile_path
