@@ -14,7 +14,7 @@ export async function getTrendingMovies() {
 
   } catch (error) {
     console.log(error);
-    return [];
+    return null;
   }
 }
 
@@ -29,24 +29,34 @@ export async function searchMovies(query) {
 
   } catch (error) {
     console.log(error);
-    return [];
+    return null;
   }
 }
 
 export async function getMovieDetails(movieId) {
 
-  const response = await fetch(
+  try {
+    const response = await fetch(
     `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`
   );
 
   return await response.json();
+  }  catch (error) {
+    console.log(error);
+    return null;
+}
 }
 export async function getMovieCredits(movieId) {
 
-  const response = await fetch(
+  try {
+    const response = await fetch(
     `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`
   );
 
   return await response.json();
+  } catch (error) {
+    console.log(error);
+    return null;
+}
 }
 
