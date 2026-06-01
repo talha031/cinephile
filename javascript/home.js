@@ -32,7 +32,7 @@ function renderHero(movie) {
     </div>
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 h-full flex flex-col justify-end p-10">
-      <h1 class="text-[#ffffff] mt-2 font-bold text-2xl md:text-5xl max-w-xl mb-4">
+      <h1 class="text-[#ffffff] mt-2 font-bold text-xl md:text-5xl max-w-xl mb-4">
         ${movie.title}
       </h1>
 
